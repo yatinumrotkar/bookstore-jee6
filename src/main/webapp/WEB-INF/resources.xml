@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Resource definitions for the Apache TomEE -->
 <resources>
-    <Resource id="h2DataSource" type="javax.sql.DataSource">
-        jdbcDriver = org.hsqldb.jdbcDriver
-        jdbcUrl = jdbc:h2:tcp://localhost/bookstore-jee6
-        jtaManaged = true
-        userName =
-        password =
+    <Resource id="BookstoreDataSource" type="DataSource">
+        JdbcDriver org.h2.Driver
+        JdbcUrl jdbc:h2:tcp://localhost/bookstorejee6
+        JtaManaged true
     </Resource>
 </resources>

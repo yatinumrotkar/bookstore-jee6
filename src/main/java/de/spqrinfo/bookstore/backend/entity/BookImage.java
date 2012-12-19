@@ -1,21 +1,20 @@
 package de.spqrinfo.bookstore.backend.entity;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
-@Entity
+@Entity(name = "BOOK_IMAGE")
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = "filename"))
 public class BookImage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @NotNull
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private BookImageType bookImageType;
 
-    @NotNull
-    @Column(length = 256)
+    @Column(length = 256, nullable = false)
     private String filename;
 
     public Long getId() {

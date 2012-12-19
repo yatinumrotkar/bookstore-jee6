@@ -1,18 +1,21 @@
 package de.spqrinfo.bookstore.backend.entity;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import java.util.Set;
 
 @Entity
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = "NAME"))
 public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @NotNull
-    @Column(length = 256)
+    @Column(length = 256, nullable = false)
     private String name;
+
+    @ManyToMany(mappedBy = "categories")
+    private Set<Book> books;
 
     public Long getId() {
         return id;

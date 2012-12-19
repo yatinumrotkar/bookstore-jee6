@@ -58,6 +58,8 @@
     </dependencies>
 
     <build>
+        <finalName>${project.artifactId}</finalName>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -68,6 +70,20 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
+
+            <!--<plugin>-->
+                <!--<groupId>org.apache.openejb.maven</groupId>-->
+                <!--<artifactId>tomee-maven-plugin</artifactId>-->
+                <!--<version>1.0.1</version>-->
+                <!--<configuration>-->
+                    <!--<tomeeVersion>1.5.1</tomeeVersion>-->
+                    <!--<tomeeClassifier>plus</tomeeClassifier>-->
+                    <!--<debugPort>8008</debugPort>-->
+                    <!--<libs>-->
+                        <!--<lib>com.h2database:h2:${h2database.version}</lib>-->
+                    <!--</libs>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
         </plugins>
     </build>
 
@@ -77,7 +93,7 @@
             <!-- Profile for running the h2 database server: mvn -Ph2 exec:java -->
 
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
 
             <!--<properties>-->

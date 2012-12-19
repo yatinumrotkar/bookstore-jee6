@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
-
-    <persistence-unit name="default" transaction-type="JTA2">
-        <jta-data-source>moviewDatabase</jta-data-source>
-        <non-jta-data-source>movieDatabaseUnmanaged</non-jta-data-source>
-
+    <persistence-unit name="default" transaction-type="JTA">
+        <jta-data-source>BookstoreDataSource</jta-data-source>
+        <!-- If no <provider> is specified (optional as of JPA 2.0), the default implementation of the container is
+            used. In case of TomEE it's OpenJPA, which properties can be found here:
+            http://openjpa.apache.org/builds/2.1.1/apache-openjpa/docs/ref_guide_conf_jdbc.html
+        -->
         <properties>
             <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(ForeignKeys=true)"/>
         </properties>

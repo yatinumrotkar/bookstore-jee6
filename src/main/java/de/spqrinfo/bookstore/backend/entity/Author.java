@@ -5,16 +5,17 @@ import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Entity
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = "NAME"))
 public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @NotNull
-    @Column(length = 256)
+    @Column(length = 256, nullable = false)
     private String name;
 
+    @NotNull
     @ManyToMany(mappedBy = "authors")
     private List<Book> books;
 
@@ -33,8 +34,6 @@ public class Author {
     public void setName(final String name) {
         this.name = name;
     }
-
-
 
     @Override
     public String toString() {
