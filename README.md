@@ -1,10 +1,10 @@
 JEE6 Bookstore sample application.
 
 # Running
+
 1. Run the H2 database server: `mvn -Ph2 exec:java`
-2. Build `mvn package`
-3. Deploy the WAR file into preferred application server (we use TomEE)
-4. Navigate to <a href="http://localhost:8080/">http://localhost:8080/</a>
+2. Run with TomEE `mvn package tomee:run`
+4. Navigate to <a href="http://localhost:8080/bookstore-jee6/">http://localhost:8080/bookstore-jee6/</a>
 
 # IntelliJ Database browser
 
