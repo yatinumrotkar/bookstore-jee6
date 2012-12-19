@@ -49,6 +49,14 @@ public class Book {
         this.authors.add(author);
     }
 
+    public void addCategory(final Category category) {
+        this.categories.add(category);
+    }
+
+    public void addPrice(final Price price) {
+        this.prices.add(price);
+    }
+
     public void addBookImage(final BookImage bookImage) {
         this.bookImages.add(bookImage);
     }
@@ -120,7 +128,9 @@ public class Book {
                 ", publication=" + publication +
                 ", enabled=" + enabled +
                 ", authors=" + authors +
-                ", images=" + bookImages +
+                ", categories=" + categories +
+                ", prices=" + prices +
+                ", bookImages=" + bookImages +
                 '}';
     }
 }

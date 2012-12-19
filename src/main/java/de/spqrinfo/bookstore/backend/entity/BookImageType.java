@@ -4,5 +4,5 @@ package de.spqrinfo.bookstore.backend.entity;
 // And the standard JPA doesn't support custom types.
 // http://stackoverflow.com/questions/2751733/map-enum-in-jpa-with-fixed-values
 public enum BookImageType {
-    CONVER_SMALL, COVER_NORMAL;
+    CONVER_SMALL, COVER_NORMAL
 }

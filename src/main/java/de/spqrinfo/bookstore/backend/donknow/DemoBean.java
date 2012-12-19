@@ -36,6 +36,7 @@ public class DemoBean {
         return this.em.createQuery("SELECT c FROM Category c", Category.class).getResultList();
     }
 
+    @SuppressWarnings("SameReturnValue")
     public String getName() {
         return "Marcus";
     }
