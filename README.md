@@ -1,5 +1,7 @@
 JEE6 Bookstore sample application.
 
+# NOTE: This is unfinished work in progress.
+
 # Running
 
 1. Run the H2 database server: `mvn -Ph2 exec:java`
